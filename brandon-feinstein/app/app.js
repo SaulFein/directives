@@ -18,15 +18,14 @@ app.directive('book', function() {
     }
 })
 
-app.directive("restricted", function() {
+
+app.directive("user", function() {
     return {
-        restrict: 'A',
+        restrict: 'E',
         link: function(scope, element, attrs) {
-            // Some auth check function
-            var isAuthorized = checkAuthorization();
-            if (!isAuthorized) {
-                element.css('display', 'none');
-            }
-        }
+            scope.username = attrs.username;
+            scope.avatar = attrs.avatar;
+        },
+        template: '<div>Username: {{username}}, Avatar: <img src ={{avatar}}></div>'
     }
 })
