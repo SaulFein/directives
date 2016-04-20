@@ -2,24 +2,21 @@
 <html ng-app="app">
   <head>
 
+<!-- all the directives are in the same order of app.js -->
+
   </head>
   <body>
     <custom-nav></custom-nav>
+    <hr>
     <main>
-      Our main content here
       <book></book>
-      <ul>
-        <li>Home</li>
-        <li>Latest News</li>
-        <li restricted>User Administration</li>
-        <li restricted>Campaign Management</li>
-      </ul>
-      <user username="SaulFein" avatar="http://imgur.com/T6TzJyS.jpg"></user>
-
+      <hr>
+      <user username="SaulFein" image="http://imgur.com/T6TzJyS.jpg"></user>
+      <hr>
+      <button my-dom-directive>Click Me!</button>
+      <hr>
+      <div my-attribute="hello">Attribute</div>
     </main>
-    <footer>
-      Our footer
-    </footer>
     <script src="./node_modules/angular/angular.js"></script>
     <script src="./app/app.js"></script>
   </body>
